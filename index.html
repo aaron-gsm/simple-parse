@@ -6,9 +6,11 @@
   
 <body>
     <script>
-        var str = prompt("Enter paragraph");
-        var strArray = str.split('.');
-
+      var parseChar1 = prompt("Enter first parse character e.g. . or , or ;");
+      var parseChar2 = prompt("Enter second parse character e.g. . or , or ; - if there is none, enter the first parse character again");  
+      var str = prompt("Enter paragraph");
+        var strArrayTemp = str.split(parseChar2).join(parseChar1);
+        var strArray = strArrayTemp.split(parseChar1);
         for (let i = 0; i < strArray.length; i++) {
           document.write(strArray[i]+"<br>");
         }
